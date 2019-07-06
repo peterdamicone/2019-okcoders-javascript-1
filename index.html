@@ -8,14 +8,16 @@
 
 <body>
     <script>
-        var name = prompt("What is your name?");
-        var age = prompt("What is your age?");
-        if (age >= 55) {
-            document.write(name + " is old.");
-        } else if ((age > 25) && (age < 55)) {
-            document.write(name + " is just right.");
-        } else {
-            document.write(name + " is young.");
+        var number = 99;
+        while (number < 100 && number > 0) {
+
+            document.write(number + " bottles of beer on the wall, " + number + " bottles of beer. <br>");
+            document.write(number + " bottles of beer! <br>");
+            document.write("Take one down, pass it around. <br>");
+            number--;
+            document.write(number + " bottles of beer on the wall! <br>");
+
+
         }
     </script>
-</body>
+</body>x
