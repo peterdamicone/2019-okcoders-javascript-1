@@ -8,7 +8,14 @@
 
 <body>
     <script>
-        document.write(42 < 21 * 3);
-        document.write(4 + 2 > 21 || 4 + 2 > 24);
+        var name = prompt("What is your name?");
+        var age = prompt("What is your age?");
+        if (age >= 55) {
+            document.write(name + " is old.");
+        } else if ((age > 25) && (age < 55)) {
+            document.write(name + " is just right.");
+        } else {
+            document.write(name + " is young.");
+        }
     </script>
 </body>
