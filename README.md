@@ -4,7 +4,7 @@
 
 This is the project that I'm using for OK Coders for the 2nd module of the class.
 
-Email: **Peter.damicone@gmail.com**
+Email: **peter.damicone@gmail.com**
 
 ### What I hope to get out of the class:
 
