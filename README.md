@@ -8,4 +8,4 @@ Email: **Peter.damicone@gmail.com**
 
 ### What I hope to get out of the class:
 
-A deepter knowledge of HTML/CSS/Javascript to begin my own projects and client projects. I plan on gaining more clients. I also want to be able to plug into the OSU dev team when they need ad-related web things. I also would like to get better at GTM and GA with Javascript and other languages learned in this.
+A deepter knowledge of HTML/CSS/Javascript with the goal to gain a loyal freelance client base. Additionally, I work alongside the front-end dev team of OSU. My goal is to develop my skills enough so their team lead feels comfortible enough with me to allow me to work on the anything advertising related. I also would like to get better at GTM and GA with Javascript and other languages learned in this.
