@@ -10,14 +10,21 @@
     <p>This is my grid for loop exersize.
     </p>
     <script>
-        var word = prompt("What word would you like to enter into the WORD REPEATER 5000?");
-        var repeatNumber = prompt("How many times do you want to reapeat the word?");
+        // var word = prompt("What word would you like to enter into the WORD REPEATER 5000?");
+        // var repeatNumber = prompt("How many times do you want to reapeat the word?");
 
-        function wordRepeater5000(aWord, numberToRepeat) {
-            for (i = numberToRepeat; i > 0; i--) {
-                document.write(aWord + "<br>");
+        // function wordRepeater5000(aWord, numberToRepeat) {
+        //     for (i = numberToRepeat; i > 0; i--) {
+        //         document.write(aWord + "<br>");
+        //     }
+        // }
+        // wordRepeater5000(word, repeatNumber);
+        function printNums(myArray) {
+            for (i = 0; i < myArray.length; i++) {
+                document.write("Print " + myArray[i]);
+                document.write("<br>");
             }
-        }
-        wordRepeater5000(word, repeatNumber);
+            var nums = [23, 24, 55, 75];
+            printNums(nums);
     </script>
 </body>
