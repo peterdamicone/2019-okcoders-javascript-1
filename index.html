@@ -10,28 +10,38 @@
     <p>This is my grid for loop exersize.
     </p>
     <script>
-        var rows = prompt("How many rows?");
-        var cols = prompt("How many cols?");
+        // var rows = prompt("How many rows?");
+        // var cols = prompt("How many cols?");
 
-        function makeRow() {
-            for (var i = 1; i <= cols; i++) {
-                document.write(" X ");
-            }
-        }
+        // function makeRow() {
+        //     for (var i = 1; i <= cols; i++) {
+        //         document.write(" X ");
+        //     }
+        // }
 
-        function findNumbreOfCells() {
-            var total = rows * cols;
-            if (total > 100) {
-                alert("Too Many Rows");
-            }
+        // function findNumbreOfCells() {
+        //     var total = rows * cols;
+        //     if (total > 100) {
+        //         alert("Too Many Rows");
+        //     }
+        // }
+        // for (var i = 1; i <= rows; i++) {
+        //     makeRow();
+        //     document.write("<br>");
+        // }
+        // var totalCells = findNumbreOfCells();
+        // document.write("With " + rows + " Rows and " + cols);
+        // document.write(" there are " + totalCells);
+        // document.write(" total cells");
+        // write a function that picks the least common multiple between two number. While loop and return? For loop?
+        // you need to finish the introduction again to make sure you understand this shit.
+        // we will use the modulous operator. Gives you the remainder
+        var num1 = prompt("Number 1?");
+        var num2 = prompt("Number 2?");
+
+        function findLCM() {
+            for (i = 1; i <= (num1 * num2); i++)
         }
-        for (var i = 1; i <= rows; i++) {
-            makeRow();
-            document.write("<br>");
-        }
-        var totalCells = findNumbreOfCells();
-        document.write("With " + rows + " Rows and " + cols);
-        document.write(" there are " + totalCells);
-        document.write(" total cells");
+        return lcm;
     </script>
 </body>
