@@ -36,12 +36,14 @@
         // write a function that picks the least common multiple between two number. While loop and return? For loop?
         // you need to finish the introduction again to make sure you understand this shit.
         // we will use the modulous operator. Gives you the remainder
-        var num1 = prompt("Number 1?");
-        var num2 = prompt("Number 2?");
-
-        function findLCM() {
-            for (i = 1; i <= (num1 * num2); i++)
+        function bobSays(whatHeSaid, times) {
+            console.log(typeof times);
+            for (var i = 1; i <= times; i++) {
+                document.write("Bob says: " + whatHeSaid);
+                document.write("<br>");
+            }
         }
-        return lcm;
+        bobSays("Use tabs not spaces", 4);
+        bobSays("Linux Rocks", 25);
     </script>
 </body>
