@@ -10,16 +10,24 @@
     <p>This is my grid for loop exersize.
     </p>
     <script>
-        var x = 3;
-        var y = 3;
-        for (var i = x; i > 0; i--) {
+        var rows = prompt("How many rows?");
+        var cols = prompt("How many cols?");
 
-            // number++
-            for (var j = y; j > 0; j--) {
-                document.write("x");
-            }
-            document.write("<br>");
+        function findNumbreOfCells() {
+            return rows * cols;
         }
-        // You need to make a grid for loop. It should print an x and y values where x = rows and y = columns.
+        functions makeRow() {
+            for (var i = 1; i <= cols; i++) {
+                doument.write(" X ");
+            }
+        }
+        for (var j = 1; j < rows; j++) {
+            makeRow();
+            doument.write("<br>");
+        }
+        var totalCells = findNumbreOfCells();
+        document.write("With " + rows + " Rows and " + cols);
+        document.write(" there are " + totalCells);
+        document.write(" total cells");
     </script>
 </body>
