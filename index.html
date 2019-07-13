@@ -13,17 +13,21 @@
         var rows = prompt("How many rows?");
         var cols = prompt("How many cols?");
 
-        function findNumbreOfCells() {
-            return rows * cols;
-        }
-        functions makeRow() {
+        function makeRow() {
             for (var i = 1; i <= cols; i++) {
-                doument.write(" X ");
+                document.write(" X ");
             }
         }
-        for (var j = 1; j < rows; j++) {
+
+        function findNumbreOfCells() {
+            var total = rows * cols;
+            if (total > 100) {
+                alert("Too Many Rows");
+            }
+        }
+        for (var i = 1; i <= rows; i++) {
             makeRow();
-            doument.write("<br>");
+            document.write("<br>");
         }
         var totalCells = findNumbreOfCells();
         document.write("With " + rows + " Rows and " + cols);
