@@ -10,40 +10,14 @@
     <p>This is my grid for loop exersize.
     </p>
     <script>
-        // var rows = prompt("How many rows?");
-        // var cols = prompt("How many cols?");
+        var word = prompt("What word would you like to enter into the WORD REPEATER 5000?");
+        var repeatNumber = prompt("How many times do you want to reapeat the word?");
 
-        // function makeRow() {
-        //     for (var i = 1; i <= cols; i++) {
-        //         document.write(" X ");
-        //     }
-        // }
-
-        // function findNumbreOfCells() {
-        //     var total = rows * cols;
-        //     if (total > 100) {
-        //         alert("Too Many Rows");
-        //     }
-        // }
-        // for (var i = 1; i <= rows; i++) {
-        //     makeRow();
-        //     document.write("<br>");
-        // }
-        // var totalCells = findNumbreOfCells();
-        // document.write("With " + rows + " Rows and " + cols);
-        // document.write(" there are " + totalCells);
-        // document.write(" total cells");
-        // write a function that picks the least common multiple between two number. While loop and return? For loop?
-        // you need to finish the introduction again to make sure you understand this shit.
-        // we will use the modulous operator. Gives you the remainder
-        function bobSays(whatHeSaid, times) {
-            console.log(typeof times);
-            for (var i = 1; i <= times; i++) {
-                document.write("Bob says: " + whatHeSaid);
-                document.write("<br>");
+        function wordRepeater5000(aWord, numberToRepeat) {
+            for (i = numberToRepeat; i > 0; i--) {
+                document.write(aWord + "<br>");
             }
         }
-        bobSays("Use tabs not spaces", 4);
-        bobSays("Linux Rocks", 25);
+        wordRepeater5000(word, repeatNumber);
     </script>
 </body>
