@@ -7,13 +7,11 @@
 </head>
 
 <body>
-    <div id="music">
-        <h1 id="title"></h1>
-        <h3 id="author"></h3>
-    </div>
+
     <div id="myList"></div>
-    <input type="text" id="name" placeholder="Charles Dickens">
-    <button onclick="displayToScreen()">Set Author and Title</button>
+    <input type="text" id="title" placeholder="title of book of book">
+    <input type="text" id="author" placeholder="author of book of book">
+    <button onclick="displayToScreen()">Add a book</button>
     <script>
         // **Bob's google chrome tools exersize example
 
@@ -33,23 +31,41 @@
         // How to take data out from input box, and put it into a variable, and then pass that into display to screen
 
         // new exersize. Dom and Arrays
-        var authors = ["Virginia Woolf", "J.R.R. Tolkien"];
+        var book1 = {
+            author: "J.R.R. Tolkien",
+            title: "Lord of the Rings"
+        }
+        var book2 = {
+            author: "George R.R. Martin",
+            title: "Game of Thrones"
+        }
+        var book3 = {
+            author: "Butts",
+            title: "McGee"
+        }
+        let books = [book1, book2, book3];
 
         function displayToScreen() {
-            let n = document.getElementById("name").value;
-            authors.push(n);
-            document.getElementById("name").value = "";
-
+            let t = document.getElementById("title").value;
+            let a = document.getElementById("author").value;
+            let newBook = {
+                author: a,
+                title: t
+            }
+            books.push(newBook);
             printAuthList();
         }
 
         function printAuthList() {
             let auth = document.getElementById("myList");
             auth.innerHTML = "";
-            for (i = 0; i < authors.length; i++) {
-                auth.innerHTML += "<h2>" + authors[i] + "</h2>";
+            for (let i = 0; i < books.length; i++) {
+                auth.innerHTML += "<h2>" + books[i].title + "<h2>";
+                auth.innerHTML += "<h4>" + books[i].author + "<h4>";
             }
         }
+
         printAuthList();
+        // add a form to request the user to provide an author and title and display what the user requested. All we have to do is edit books.
     </script>
-</body>
+</body>x x
