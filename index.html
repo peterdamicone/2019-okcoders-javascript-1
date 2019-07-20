@@ -11,8 +11,8 @@
         <h1 id="title"></h1>
         <h3 id="author"></h3>
     </div>
+    <div id="myList"></div>
     <input type="text" id="name" placeholder="Charles Dickens">
-    <input type="text" id="titleBox" placeholder="A tale of two cities">
     <button onclick="displayToScreen()">Set Author and Title</button>
     <script>
         // **Bob's google chrome tools exersize example
@@ -22,14 +22,34 @@
         // title.innerText = "Hello World";
         // title.append(", nice page.");
         // document.bgColor = "#77D"        
-        function displayToScreen() {
-            let authorInput = document.getElementById("name").value;
-            let author = document.getElementById("author");
-            author.innerText = authorInput;
-            let titleInput = document.getElementById("titleBox").value;
-            let title1 = document.getElementById("title");
-            title1.innerText = titleInput;
-        }
+        // function displayToScreen() {
+        //     let authorInput = document.getElementById("name").value;
+        //     let author = document.getElementById("author");
+        //     author.innerText = authorInput;
+        //     let titleInput = document.getElementById("titleBox").value;
+        //     let title1 = document.getElementById("title");
+        //     title1.innerText = titleInput;
+        // }
         // How to take data out from input box, and put it into a variable, and then pass that into display to screen
+
+        // new exersize. Dom and Arrays
+        var authors = ["Virginia Woolf", "J.R.R. Tolkien"];
+
+        function displayToScreen() {
+            let n = document.getElementById("name").value;
+            authors.push(n);
+            document.getElementById("name").value = "";
+
+            printAuthList();
+        }
+
+        function printAuthList() {
+            let auth = document.getElementById("myList");
+            auth.innerHTML = "";
+            for (i = 0; i < authors.length; i++) {
+                auth.innerHTML += "<h2>" + authors[i] + "</h2>";
+            }
+        }
+        printAuthList();
     </script>
 </body>
