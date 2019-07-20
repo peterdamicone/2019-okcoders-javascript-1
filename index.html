@@ -7,94 +7,29 @@
 </head>
 
 <body>
-    <p>This is my grid for loop exersize.
-    </p>
     <div id="music">
         <h1 id="title"></h1>
         <h3 id="author"></h3>
     </div>
+    <input type="text" id="name" placeholder="Charles Dickens">
+    <input type="text" id="titleBox" placeholder="A tale of two cities">
+    <button onclick="displayToScreen()">Set Author and Title</button>
     <script>
-        // var word = prompt("What word would you like to enter into the WORD REPEATER 5000?");
-        // var repeatNumber = prompt("How many times do you want to reapeat the word?");
+        // **Bob's google chrome tools exersize example
 
-        // function wordRepeater5000(aWord, numberToRepeat) {
-        //     for (i = numberToRepeat; i > 0; i--) {
-        //         document.write(aWord + "<br>");
-        //     }
-        // }
-        // wordRepeater5000(word, repeatNumber);
-        // function printNums(myArray) {
-        //     for (i = 0; i < myArray.length; i++) {
-        //         document.write("Print " + myArray[i]);
-        //         document.write("<br>");
-        //     }
-        //     var nums = [23, 24, 55, 75];
-        //     printNums(nums);
-
-        // This is a project that I created while using Codecademy.
-        // var userName = "Peter";
-        // userName ? document.write("Hello " + userName + "! <br>") : document.write("Hello! <br>");
-        // var userQuestion = "Will I complete my Javascript project today? <br>";
-        // document.write(userName + " has asked the following question: " + userQuestion + "<br>");
-        // var randomNumber = Math.floor(Math.random() * 8);
-        // var eightBall = "";
-        // switch (randomNumber) {
-        //     case 0:
-        //         eightBall = 'It is certain';
-        //         break;
-        //     case 1:
-        //         eightBall = 'It is decidedly so';
-        //         break;
-        //     case 2:
-        //         eightBall = 'Reply hazy try again';
-        //         break;
-        //     case 3:
-        //         eightBall = 'Cannot predict now';
-        //         break;
-        //     case 4:
-        //         eightBall = 'Do not count on it';
-        //         break;
-        //     case 5:
-        //         eightBall = 'My sources say no';
-        //         break;
-        //     case 6:
-        //         eightBall = 'Outlook not so good';
-        //         break;
-        //     case 7:
-        //         eightBall = 'Signs point to yes';
-        //         break;
-        // }
-        // document.write(eightBall);
-
-        // this was a troubleshooting thing I did for Rob.
-        // var arr = [3, 5, 7];
-        // var i = 0;
-        // arr.foo = 'hello';
-
-        // function printMyArray() {
-        //     for (i = 0; i < arr.length; i++) {
-        //         document.write(arr[i] + "<br>"); // logs 3, 5, 7
-        //     }
-        // }
-        // printMyArray(arr);
-
-        //week 3 javascript class review
-
-        // function displayToScreen(sometext) {
-        //     document.write(sometext);
-        // }
-        // let ourList = ["one", "two", "3"];
-        // // adding to array
-        // ourList[4] = "5";
-        // ourList.push("four");
-        // ourList[ourList.length] = "the next thing";
-        // // removing from array
-        // ourList.pop();
-        // delete ourList[4];
-
-        // for (i = 0; i < ourList.length; i++) {
-        //     document.write(ourList[i] + "<br>");
-        // }
-        // DOM document review
+        // document.getElementById("title");
+        // let title = document.getElementById("title");
+        // title.innerText = "Hello World";
+        // title.append(", nice page.");
+        // document.bgColor = "#77D"        
+        function displayToScreen() {
+            let authorInput = document.getElementById("name").value;
+            let author = document.getElementById("author");
+            author.innerText = authorInput;
+            let titleInput = document.getElementById("titleBox").value;
+            let title1 = document.getElementById("title");
+            title1.innerText = titleInput;
+        }
+        // How to take data out from input box, and put it into a variable, and then pass that into display to screen
     </script>
 </body>
