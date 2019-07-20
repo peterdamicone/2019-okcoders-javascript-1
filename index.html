@@ -12,9 +12,6 @@
     <input type="text" id="title" placeholder="title of book of book">
     <input type="text" id="author" placeholder="author of book of book">
     <button onclick="displayToScreen()">Add a book</button>
-    <h5>removing a booK?</h5>
-    <input type="text" id="title" placeholder="title of book of book">
-    <input type="text" id="author" placeholder="author of book of book">
     <button onclick="removeFromScreen()">Remove a book</button>
     <script>
         // **Bob's google chrome tools exersize example
@@ -62,14 +59,7 @@
         }
 
         function removeFromScreen() {
-            let t = document.getElementById("title").value;
-            let a = document.getElementById("author").value;
-            let removeBook = {
-                author: a,
-                title: t
-            }
-            books.pop(removeBook);
-            books.splice(books, removeBook);
+            books.pop();
             printAuthList();
         }
 
