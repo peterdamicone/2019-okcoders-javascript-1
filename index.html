@@ -30,42 +30,63 @@
         // }
         // How to take data out from input box, and put it into a variable, and then pass that into display to screen
 
-        // new exersize. Dom and Arrays
-        var book1 = {
-            author: "J.R.R. Tolkien",
-            title: "Lord of the Rings"
-        }
-        var book2 = {
-            author: "George R.R. Martin",
-            title: "Game of Thrones"
-        }
-        var book3 = {
-            author: "Butts",
-            title: "McGee"
-        }
-        let books = [book1, book2, book3];
+        // new exersize. Dom and Arrays and adding new objects to object array.
 
-        function displayToScreen() {
-            let t = document.getElementById("title").value;
-            let a = document.getElementById("author").value;
-            let newBook = {
-                author: a,
-                title: t
-            }
-            books.push(newBook);
-            printAuthList();
-        }
+        // var book1 = {
+        //     author: "J.R.R. Tolkien",
+        //     title: "Lord of the Rings"
+        // }
+        // var book2 = {
+        //     author: "George R.R. Martin",
+        //     title: "Game of Thrones"
+        // }
+        // var book3 = {
+        //     author: "Butts",
+        //     title: "McGee"
+        // }
+        // let books = [book1, book2, book3];
 
-        function printAuthList() {
-            let auth = document.getElementById("myList");
-            auth.innerHTML = "";
-            for (let i = 0; i < books.length; i++) {
-                auth.innerHTML += "<h2>" + books[i].title + "<h2>";
-                auth.innerHTML += "<h4>" + books[i].author + "<h4>";
-            }
-        }
+        // function displayToScreen() {
+        //     let t = document.getElementById("title").value;
+        //     let a = document.getElementById("author").value;
+        //     let newBook = {
+        //         author: a,
+        //         title: t
+        //     }
+        //     books.push(newBook);
+        //     printAuthList();
+        // }
 
-        printAuthList();
+        // function printAuthList() {
+        //     let auth = document.getElementById("myList");
+        //     auth.innerHTML = "";
+        //     for (let i = 0; i < books.length; i++) {
+        //         auth.innerHTML += "<h2>" + books[i].title + "<h2>";
+        //         auth.innerHTML += "<h4>" + books[i].author + "<h4>";
+        //     }
+        // }
+
+        // printAuthList();
         // add a form to request the user to provide an author and title and display what the user requested. All we have to do is edit books.
+
+        // Codecademy if/else statement project
+        let raceNumber = Math.floor(Math.random() * 1000);
+        var registerEarly = false;
+        const runnerAge = 18;
+        if (registerEarly && runnerAge >= 18) {
+            console.log("You have registered early and you are an adult");
+            raceNumber += 1000;
+            console.log(raceNumber);
+        }
+        if (registerEarly && runnerAge >= 18) {
+            console.log("Your race numberr is " + raceNumber + " and you will race at 9:30am");
+        } else if (!registerEarly && runnerAge >= 18) {
+            console.log("Your race numberr is " + raceNumber + " and you will race at 11:00am");
+        }
+        if (runnerAge < 18) {
+            console.log("Your race numberr is " + raceNumber + " and you will race at 12:30pm");
+        } else if (runnerAge == 18) {
+            console.log("See the registration desk please");
+        }
     </script>
-</body>x x
+</body>
