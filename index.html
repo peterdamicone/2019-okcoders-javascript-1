@@ -10,18 +10,20 @@
 
 
     <script>
-        // 2. fizz buzz machine - eloquent javascript assignment 2
-        for (i = 0; i <= 100; i++) {
-            if (i % 3 === 0) {
-                console.log(i + " fizz");
-                document.write(i + " fizz <br>");
-            } else if (i % 5 === 0) {
-                console.log(i + " buzz");
-                document.write(i + " buzz <br>");
-            } else {
-                console.log(i);
-                document.write(i + "<br>");
+        // 3. New grid exersize.
+        let size = prompt("How BIG you want your grid to be?");
+        for (let i = 0; i <= size; i++) {
+            let character = "";
+            for (let j = 0; j <= size; j++) {
+                let total = j + i;
+                if (total % 2 == 0) {
+                    character += "#";
+                } else {
+                    character += " ";
+                }
             }
+            console.log(character);
+
         }
     </script>
 </body>
