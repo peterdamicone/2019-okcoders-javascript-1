@@ -14,73 +14,12 @@
     <button onclick="displayToScreen()">Add a book</button>
     <button onclick="removeFromScreen()">Remove a book</button>
     <script>
-        // **Bob's google chrome tools exersize example
+        // 1. First eloquent javascript exersize. I had to look this up. Looks like you need an independent variable outside the for loop with an empty string. I have no idea why this is different than adding another # string value to the triangle vaiable, logging it, and then doing triangle ++
 
-        // document.getElementById("title");
-        // let title = document.getElementById("title");
-        // title.innerText = "Hello World";
-        // title.append(", nice page.");
-        // document.bgColor = "#77D"        
-        // function displayToScreen() {
-        //     let authorInput = document.getElementById("name").value;
-        //     let author = document.getElementById("author");
-        //     author.innerText = authorInput;
-        //     let titleInput = document.getElementById("titleBox").value;
-        //     let title1 = document.getElementById("title");
-        //     title1.innerText = titleInput;
-        // }
-        // How to take data out from input box, and put it into a variable, and then pass that into display to screen
-
-        // Exersize. Dom and Arrays and adding new objects to object array.
-
-        // var book1 = {
-        //     author: "J.R.R. Tolkien",
-        //     title: "Lord of the Rings"
-        // }
-        // var book2 = {
-        //     author: "George R.R. Martin",
-        //     title: "Game of Thrones"
-        // }
-        // var book3 = {
-        //     author: "Butts",
-        //     title: "McGee"
-        // }
-        // let books = [book1, book2, book3];
-
-        // function displayToScreen() {
-        //     let t = document.getElementById("title").value;
-        //     let a = document.getElementById("author").value;
-        //     let newBook = {
-        //         author: a,
-        //         title: t
-        //     }
-        //     books.push(newBook);
-        //     printAuthList();
-        // }
-
-        // function removeFromScreen() {
-        //     books.pop();
-        //     printAuthList();
-        // }
-
-        // function printAuthList() {
-        //     let auth = document.getElementById("myList");
-        //     auth.innerHTML = "";
-        //     for (let i = 0; i < books.length; i++) {
-        //         auth.innerHTML += "<h2>" + books[i].title + "<h2>";
-        //         auth.innerHTML += "<h4>" + books[i].author + "<h4>";
-        //     }
-        // }
-
-        // printAuthList();
-        // add a form to request the user to provide an author and title and display what the user requested. All we have to do is edit books.
-        // bonus event - create a function that removes a book from list and updates screen
-
-        // Eloquent javascript exsersize. I haven't done a for loop in a while. Lets do one
-        let number = 1;
-        while (number < 10) {
-            document.write(number + "<br>");
-            number++
+        let triangle = "";
+        for (i = 0; i < 7; i++) {
+            triangle += "#";
+            console.log(triangle);
         }
     </script>
 </body>
