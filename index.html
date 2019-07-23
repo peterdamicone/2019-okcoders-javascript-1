@@ -8,18 +8,20 @@
 
 <body>
 
-    <div id="myList"></div>
-    <input type="text" id="title" placeholder="title of book of book">
-    <input type="text" id="author" placeholder="author of book of book">
-    <button onclick="displayToScreen()">Add a book</button>
-    <button onclick="removeFromScreen()">Remove a book</button>
-    <script>
-        // 1. First eloquent javascript exersize. I had to look this up. Looks like you need an independent variable outside the for loop with an empty string. I have no idea why this is different than adding another # string value to the triangle vaiable, logging it, and then doing triangle ++
 
-        let triangle = "";
-        for (i = 0; i < 7; i++) {
-            triangle += "#";
-            console.log(triangle);
+    <script>
+        // 2. fizz buzz machine - eloquent javascript assignment 2
+        for (i = 0; i <= 100; i++) {
+            if (i % 3 === 0) {
+                console.log(i + " fizz");
+                document.write(i + " fizz <br>");
+            } else if (i % 5 === 0) {
+                console.log(i + " buzz");
+                document.write(i + " buzz <br>");
+            } else {
+                console.log(i);
+                document.write(i + "<br>");
+            }
         }
     </script>
 </body>
