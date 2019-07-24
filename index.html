@@ -7,24 +7,18 @@
 </head>
 
 <body>
-
+    <div id="motivation">
+        <p>Don't give up.</p>
+    </div>
 
     <script>
-        // 3. New grid exersize.
-        let size = prompt("How BIG you want your grid to be?");
-        for (let i = 0; i <= size; i++) {
-            let character = "";
-            for (let j = 0; j <= size; j++) {
-                let total = j + i;
-                if (total % 2 == 0) {
-                    character += "#";
-                } else {
-                    character += " ";
-                }
-            }
-            console.log(character);
-            document.write(character + "<br>");
+        // ch3E1. Write a function min that takes two arguments and returns the smallest value, ie. minimum.
+        let a = prompt("What is number 1?");
+        let b = prompt("What is number 2?");
 
+        function min(number1, number2) {
+            return Math.min(number1, number2);
         }
+        document.write(Math.min(a, b));
     </script>
 </body>
