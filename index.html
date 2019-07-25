@@ -12,13 +12,24 @@
     </div>
 
     <script>
-        // ch3E1. Write a function min that takes two arguments and returns the smallest value, ie. minimum.
-        let a = prompt("What is number 1?");
-        let b = prompt("What is number 2?");
+        // ch3E2. Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this? 
+        // This is a dumb exersize. Its teaching me how recursion can break a function. I guess I'll go ahead and do that.
+        let a = prompt("What is the whole number?");
 
-        function min(number1, number2) {
-            return Math.min(number1, number2);
+        function isEven(number) {
+            if (number % 2 === 0) {
+                console.log("This is an even number");
+                return true;
+            } else if (number % 2 === 1) {
+                console.log("This is an odd number");
+                return false;
+            } else {
+                function isNaN(number) {
+                    return number + -number;
+                }
+                isNaN(number);
+            }
         }
-        document.write(Math.min(a, b));
+        document.write(isEven(a));
     </script>
 </body>
