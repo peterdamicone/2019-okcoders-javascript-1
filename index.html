@@ -12,24 +12,32 @@
     </div>
 
     <script>
-        // ch3E2. Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this? 
-        // This is a dumb exersize. Its teaching me how recursion can break a function. I guess I'll go ahead and do that.
-        let a = prompt("What is the whole number?");
+        // ch3E3. Bean counting
+        //Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
+        // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
+        let string = prompt("What is the word you want to count?");
+        let character = prompt("What is the letter you want to count?");
+        let counterForBs = 0;
+        let counterForChar = 0;
 
-        function isEven(number) {
-            if (number % 2 === 0) {
-                console.log("This is an even number");
-                return true;
-            } else if (number % 2 === 1) {
-                console.log("This is an odd number");
-                return false;
-            } else {
-                function isNaN(number) {
-                    return number + -number;
-                }
-                isNaN(number);
+        function countBs(a) {
+            for (i = 0; i < a.length; i++) {
+                if (a[i] === "B") {
+                    counterForBs++;
+                } else {}
             }
         }
-        document.write(isEven(a));
+
+        function countChar(word, letter) {
+            for (i = 0; i < word.length; i++) {
+                if (word[i] === letter) {
+                    counterForChar++;
+                } else {}
+            }
+        }
+        countBs(string);
+        countChar(string, character);
+        console.log(counterForBs);
+        console.log(counterForChar);
     </script>
 </body>
