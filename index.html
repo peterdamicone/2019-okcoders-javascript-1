@@ -12,32 +12,31 @@
     </div>
 
     <script>
-        // ch3E3. Bean counting
-        //Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
-        // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
-        let string = prompt("What is the word you want to count?");
-        let character = prompt("What is the letter you want to count?");
-        let counterForBs = 0;
-        let counterForChar = 0;
+        // ch4E1. Some of a range
+        // Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.        // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
+        let start = prompt("What number do I start with?");
+        let end = prompt("What number do I end with?");
 
-        function countBs(a) {
-            for (i = 0; i < a.length; i++) {
-                if (a[i] === "B") {
-                    counterForBs++;
-                } else {}
+        function range(numS, numE) {
+            let range = [];
+            for (i = numS; i <= numE; i++) {
+                range.push(i);
             }
+            return range;
         }
 
-        function countChar(word, letter) {
-            for (i = 0; i < word.length; i++) {
-                if (word[i] === letter) {
-                    counterForChar++;
-                } else {}
+        function sum(arrayOfNumbers) {
+            let sum = 0;
+            for (i = 0; i < arrayOfNumbers.length; i++) {
+                sum += arrayOfNumbers[i];
             }
-        }
-        countBs(string);
-        countChar(string, character);
-        console.log(counterForBs);
-        console.log(counterForChar);
+
+            function sum(arrayOfNumbers) {
+                return arrayOfNumbers.reduce(function(accumulator, b) {
+                    return accumulator + b
+                }, 0);
+            }
+            document.write("the range of your array " + range(start, end));
+            document.write("the sum of your range is " + sum(range(start, end)));
     </script>
 </body>
