@@ -12,31 +12,28 @@
     </div>
 
     <script>
-        // ch4E1. Some of a range
-        // Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.        // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
-        let start = prompt("What number do I start with?");
-        let end = prompt("What number do I end with?");
-
-        function range(numS, numE) {
-            let range = [];
-            for (i = numS; i <= numE; i++) {
-                range.push(i);
+        var arrayWithObjectsExample = [{
+            name: "Zach",
+            age: 5,
+            address: {
+                zip: 73106
             }
-            return range;
+        }, {
+            name: "Bob",
+            age: 4,
+            address: {
+                zip: 73103
+            }
+        }]
+
+        // write something that will console.log the name value of each object in the array
+        function nameLog4(array) {
+            for (i = 0; i < array.length; i++) {
+                if (array[i].age > 4) {
+                    console.log(array[i].name);
+                }
+            }
         }
-
-        function sum(arrayOfNumbers) {
-            let sum = 0;
-            for (i = 0; i < arrayOfNumbers.length; i++) {
-                sum += arrayOfNumbers[i];
-            }
-
-            function sum(arrayOfNumbers) {
-                return arrayOfNumbers.reduce(function(accumulator, b) {
-                    return accumulator + b
-                }, 0);
-            }
-            document.write("the range of your array " + range(start, end));
-            document.write("the sum of your range is " + sum(range(start, end)));
+        nameLog4(arrayWithObjectsExample);
     </script>
 </body>

@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <title>Ok Coders JS1 Quiz</title>
+</head>
+
+</html>
+
+<body>
+    <a href="indexDom.html"> This is the dom part of the quiz </a>
+    <script>
+        // ----- Fundamentals
+
+        // assign 5 to a variable called age
+        let age = 5;
+        // what is the value of this: true && true
+        true
+        // what is the value of this: true && false
+        true
+        // what is the value of this: true || true
+        true
+        // what is the value of this: false || true
+        false
+        // what is the value of this: false && false
+        false
+        // write something that checks whether the variable below is greater than or equal to 5, and if it is prints, "the number is greater than or equal 5"
+        var number = 8
+        if (number >= 5) {
+            console.log("the number is greater than or equal 5");
+        }
+        // now also check to see if it is less than or equal to 0, and print "the number is less than or equal to 0"
+        else if (number <= 0) {
+            console.log("the number is less than or equal to 0");
+        }
+        // now, if it is not greater than 5, and not less than 0, print, "your number is between 0 and 5"
+        else if (!(number >= 5) && !(number <= 0)) {
+            console.log("your number is between 0 and 5");
+        }
+        // ---- Functions
+
+        // what will the output of the below program be
+        // var name = "Zach"
+        // function printName() {
+        // 	var name = "Bob"
+        // 	console.log(name)
+        // }
+        // printName()
+        // console.log(name)
+        console.log("Bob");
+        // what will the output of the below program be
+        // var name = "Zach"
+        // function printName(name) {
+        // 	console.log(name)
+        // }
+        // printName()
+        // console.log(name)
+        undefined
+        Zach
+        // what will the output of the below program be
+        // var name = "Zach"
+        // function printName(name) {
+        // 	console.log(name)
+        // }
+        // printName("Bob")
+        // console.log(name)
+        Bob
+        Zach
+        // what will the output of the below program be
+        // function printName(name) {
+        // 	name
+        // }
+        // console.log(printName)
+        Nothing
+        // what will the output of the below program be
+        // function printName(name) {
+        // 	name
+        // }
+        // console.log(printName("Bob"))
+        undefined
+        // what will the output of the below program be
+        // function printName(name) {
+        // 	return name
+        // }
+        // console.log(printName("Bob") + " Rockers")
+            "Bob Rockers"
+
+        // ----- Arrays
+        var arrayExample = ["foo", "bar", "baz"]
+
+        // add one item of your choice to the end of array
+        arrayExample.push(1);
+        // remove the last item from the array
+        arrayExample.pop();
+        // remove the second item from the array
+        arrayExample.splice(1, 1);
+        // write something that will console log each element in the array
+        for (i = 0; i < arrayExample.length; i++) {
+            console.log(arrayExample[i]);
+        }
+        // write something with will console log each element in the array with the text: "here is the <nth> element, its value is: <value>", replacing the <> items with the proper value
+        for (i = 0; i < arrayExample.length; i++) {
+            console.log("Here is the " + i + "th element, its value is" + arrayExample[i]);
+        }
+        // take your if greater than or equal to 5, less than or equal to 0, etc. logic from above, and write something that will run that test on each of the numbers below
+        var numbers = [5, 8, 42, 34, 58, 2, -4, 7]
+        for (i = 0; i < numbers.length; i++) {
+            if (numbers[i] >= 5) {
+                console.log(numbers[i] + " is greater than or equal 5");
+            } else if (numbers[i] <= 0) {
+                console.log(numbers[i] + " is less than or equal to 0");
+            } else if (!(numbers[i] >= 5) && !(numbers[i] <= 0)) {
+                console.log(numbers[i] + " is between 0 and 5");
+            }
+        }
+        // what is the sum of the numbers in the numbers array (write a program to give back the answer)
+        function sum(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        console.log(sum(numbers));
+
+        // ----- Objects
+        var objectExample = {
+            firstName: "Bertrand",
+            lastName: "Russell",
+            age: 42
+        }
+
+        // console.log the age property of the object
+        console.log(objectExample.age);
+        // console.log the firstName property of the object
+        console.log(objectExample.firstName);
+        // add a new property to the object called occupation, and give it a value of your choice, for example (Philosopher)
+        objectExample.occupation = "Philosopher"
+        console.log(objectExample.occupation);
+        // write a function called fullName that takes the object, and returns a string with the firstName and lastName properties combined together
+        function fullName(object) {
+            console.log(object.firstName + " " + object.lastName + " ");
+        }
+        fullName(objectExample);
+        // ----- Arrays with Objects
+        var arrayWithObjectsExample = [{
+            name: "Zach",
+            age: 5,
+            address: {
+                zip: 73106
+            }
+        }, {
+            name: "Bob",
+            age: 4,
+            address: {
+                zip: 73103
+            }
+        }]
+
+        // write something that will console.log the name value of each object in the array
+        function nameLog(array) {
+            for (i = 0; i < array.length; i++) {
+                console.log(array[i].name);
+            }
+        }
+        nameLog(arrayWithObjectsExample);
+        // write something that will console.log the zip value inside the address of each object in the array
+        function zipLog(array) {
+            for (i = 0; i < array.length; i++) {
+                console.log(array[i].address.zip);
+            }
+        }
+        zipLog(arrayWithObjectsExample);
+        // write something that will print the name property of each element in the above array if the age property is greater than 4
+        function nameLog4(array) {
+            for (i = 0; i < array.length; i++) {
+                if (array[i].age > 4) {
+                    console.log(array[i].name);
+                }
+            }
+        }
+        nameLog4(arrayWithObjectsExample);
+        // ----- Dom/Page manipulation
+
+        // write an html file that will prompt the user and ask for their age, save that in a var called userAge
+
+        // instead of prompting the user for their age, get it though a text input field, and add a button so they can submit. When they submit, console.log the value they provided
+
+        // instead of console.logging their age, on the screen below the input after they hit submit, add this text: "You were <age> in 1999"
+
+        // With <age> being the person's age in the year 1999
+
+        // ----- Bonus
+
+        // write a function called log each, that will take an array of elements, and log each element in the array to the console
+
+        // what is happenining in this function
+
+        var a = 1
+        var b = 2
+
+        function combine(a, b) {
+            b++
+            return a + b
+        }
+
+        function log(stuff) {
+            console.log("Here is what you wanted me to log: ", stuff)
+        }
+
+        log(a + b + combine(a, b))
+    </script>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is my dom/page manipulation file</title>
+</head>
+<input>
+
+<body>
+    <p>What is your first name?</p>
+    <input type="number" name="age" id="age">
+    <input type="submit" value="Submit" onclick="userAge()">
+
+    <script>
+        // ----- Dom/Page manipulation
+
+        // write an html file that will prompt the user and ask for their age, save that in a var called userAge
+        // instead of prompting the user for their age, get it though a text input field, and add a button so they can submit. When they submit, console.log the value they provided
+        function userAge() {
+            console.log(document.getElementById("age").value);;
+        }
+        // instead of console.logging their age, on the screen below the input after they hit submit, add this text: "You were <age> in 1999"
+        function userAge() {
+            console.log("You were " + (document.getElementById("age").value - 20) + " in 1999");;
+        }
+        // With <age> being the person's age in the year 1999
+    </script>
+</body>
+
+</html>
