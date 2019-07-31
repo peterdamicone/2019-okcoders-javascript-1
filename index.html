@@ -12,28 +12,42 @@
     </div>
 
     <script>
-        var arrayWithObjectsExample = [{
-            name: "Zach",
-            age: 5,
-            address: {
-                zip: 73106
-            }
-        }, {
-            name: "Bob",
-            age: 4,
-            address: {
-                zip: 73103
-            }
-        }]
+        // Eloquent Javascript Exersize -  CH4E2 - Reversing an Array
+        // For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument 
+        // and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, 
+        // does what the reverse method does: it modifies the array given as argument by reversing its elements. 
+        let oldArray = ["A", "B", "C", "D", "F"];
+        let newArray = [];
+        let newArray1 = [];
 
-        // write something that will console.log the name value of each object in the array
-        function nameLog4(array) {
-            for (i = 0; i < array.length; i++) {
-                if (array[i].age > 4) {
-                    console.log(array[i].name);
-                }
+        function reverseArray(array) {
+            console.log(array.length);
+            let newArray = [];
+            for (let i = array.length - 1; i >= 0; i--) {
+                newArray.push(array[i]);
+                console.log(array);
             }
+            return newArray;
         }
-        nameLog4(arrayWithObjectsExample);
+
+        function reverseArrayInPlace(array) {
+            for (let i = array.length; i >= 3; i--) {
+                newArray1.push(array[i]);
+                console.log(array);
+            }
+            for (let i = array.length - 3; i >= 0; i--) {
+                newArray1.push(array[i]);
+                console.log(array);
+            }
+
+            return newArray1;
+
+        }
+
+        document.write(oldArray);
+        document.write("<br>");
+        document.write(reverseArray(oldArray));
+        document.write("<br>");
+        document.write(reverseArrayInPlace(oldArray));
     </script>
 </body>
