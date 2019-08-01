@@ -12,45 +12,44 @@
     </div>
 
     <script>
-        // Eloquent Javascript Exersize -  CH4E3 Lists 
+        // Eloquent Javascript Exersize -  CH4E4 Deep evaluation
         /* 
-         Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument. 
-         Also write a listToArray function that produces an array from a list. 
-         Then add a helper function prepend, which takes an element and a list and creates a new list that adds the 
-         element to the front of the input list, and nth, which takes a list and a number and returns the element at the 
-         given position in the list (with zero referring to the first element) or undefined when there is no such element.
+        Write a function deepEqual that takes two values and returns true only if they are the same value or are objects 
+        with the same properties, where the values of the properties are equal when compared with a recursive call to deepEqual.
          */
-        let array1 = [1, 2, 3];
-        let list = {
-            value: 1,
-            rest: {
-                value: 2,
-                rest: {
-                    value: 3,
-                    rest: null
-                }
-            }
+        let obj = {
+            here: {
+                is: "an"
+            },
+            object: 2
         };
 
-        function arrayToList(array) {
-            let list = null;
-            for (let i = array.length - 1; i >= 0; i--) {
-                list = {
-                    value: array[i],
-                    rest: list
-                };
+        function deepEqual(a, b) {
+            if (a === b) {
+                return true;
+                console.log("true, they are equal");
+            } else if ((typeof b === "object" || b != null) || (typeof a === "object" || a != null)) {
+                return false;
+                console.log("true, that is an object");
+            } else {
+                return false;
+                console.log("not object or same number");
             }
-            return list;
         }
 
-        function listToArray(list) {
-            let array2 = [];
-            for (let node = list; node; node = node.rest) {} {
-                array2.push(node.value);
-            }
-            return array2;
-        }
-        document.write(arrayToList(array1));
-        document.write(listToArray(list));
+        document.write(deepEqual(1, 1));
+        console.log(deepEqual(obj, obj));
+        // → true
+        console.log(deepEqual(obj, {
+            here: 1,
+            object: 2
+        }));
+        // → false
+        console.log(deepEqual(obj, {
+            here: {
+                is: "an"
+            },
+            object: 2
+        }));
     </script>
 </body>
