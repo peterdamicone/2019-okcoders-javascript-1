@@ -12,42 +12,45 @@
     </div>
 
     <script>
-        // Eloquent Javascript Exersize -  CH4E2 - Reversing an Array
-        // For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument 
-        // and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, 
-        // does what the reverse method does: it modifies the array given as argument by reversing its elements. 
-        let oldArray = ["A", "B", "C", "D", "F"];
-        let newArray = [];
-        let newArray1 = [];
+        // Eloquent Javascript Exersize -  CH4E3 Lists 
+        /* 
+         Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument. 
+         Also write a listToArray function that produces an array from a list. 
+         Then add a helper function prepend, which takes an element and a list and creates a new list that adds the 
+         element to the front of the input list, and nth, which takes a list and a number and returns the element at the 
+         given position in the list (with zero referring to the first element) or undefined when there is no such element.
+         */
+        let array1 = [1, 2, 3];
+        let list = {
+            value: 1,
+            rest: {
+                value: 2,
+                rest: {
+                    value: 3,
+                    rest: null
+                }
+            }
+        };
 
-        function reverseArray(array) {
-            console.log(array.length);
-            let newArray = [];
+        function arrayToList(array) {
+            let list = null;
             for (let i = array.length - 1; i >= 0; i--) {
-                newArray.push(array[i]);
-                console.log(array);
+                list = {
+                    value: array[i],
+                    rest: list
+                };
             }
-            return newArray;
+            return list;
         }
 
-        function reverseArrayInPlace(array) {
-            for (let i = array.length; i >= 3; i--) {
-                newArray1.push(array[i]);
-                console.log(array);
+        function listToArray(list) {
+            let array2 = [];
+            for (let node = list; node; node = node.rest) {} {
+                array2.push(node.value);
             }
-            for (let i = array.length - 3; i >= 0; i--) {
-                newArray1.push(array[i]);
-                console.log(array);
-            }
-
-            return newArray1;
-
+            return array2;
         }
-
-        document.write(oldArray);
-        document.write("<br>");
-        document.write(reverseArray(oldArray));
-        document.write("<br>");
-        document.write(reverseArrayInPlace(oldArray));
+        document.write(arrayToList(array1));
+        document.write(listToArray(list));
     </script>
 </body>
