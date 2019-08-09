@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Okcoders Javascript
+    </title>
+</head>
+
+<body>
+    <div id="motivation">
+        <p>Don't give up.</p>
+    </div>
+
+    <script>
+        const getUserChoice = userInput => {
+            userInput = userInput.toLowerCase();
+            if (userInput === "rock" || userInput === "scissors" || userInput === "paper") {
+                return userInput;
+            } else {
+                console.log("Error. Please input rock, paper, or scissors");
+            }
+
+        };
+
+        function getComputerChoice() {
+            let computerChoice = Math.floor(Math.random() * 3);
+            switch (computerChoice) {
+                case 0:
+                    return "rock";
+                case 1:
+                    return "paper";
+                case 2:
+                    return "scissors";
+                default:
+                    return "invalid";
+                    break;
+            }
+        }
+
+        function determineWinnter(userChoice, compChoice) {
+            if (userChoice === compChoice) {
+                return "The game was a tie."
+            }
+            if (userChoice === "rock") {
+                if (compChoice === "paper") {
+                    return "Computer won!"
+                } else {
+                    return "You won!"
+                }
+            }
+            if (userChoice === "paper") {
+                if (compChoice === "scissors") {
+                    return "Computer won!"
+                } else {
+                    return "You won!"
+                }
+            }
+            if (userChoice === "scissors") {
+                if (compChoice === "rock") {
+                    return "Computer won!"
+                } else {
+                    return "You won!"
+                }
+            }
+
+        }
+
+        function playGame() {
+            const userChoice = getUserChoice("rock")
+            const computerChoice = getComputerChoice();
+            console.log("You chose " + userChoice);
+            console.log("the computer chose " + computerChoice);
+            console.log(determineWinnter(userChoice, computerChoice));
+        }
+        console.log(playGame());
+    </script>
+</body>
