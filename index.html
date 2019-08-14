@@ -12,44 +12,22 @@
     </div>
 
     <script>
-        // Eloquent Javascript Exersize -  CH4E4 Deep evaluation
-        /* 
-        Write a function deepEqual that takes two values and returns true only if they are the same value or are objects 
-        with the same properties, where the values of the properties are equal when compared with a recursive call to deepEqual.
-         */
-        let obj = {
-            here: {
-                is: "an"
-            },
-            object: 2
-        };
+        // Eloquent Javascript Exersize -  CH5E1 Flattening
 
-        function deepEqual(a, b) {
-            if (a === b) {
-                return true;
-                console.log("true, they are equal");
-            } else if ((typeof b === "object" || b != null) || (typeof a === "object" || a != null)) {
-                return false;
-                console.log("true, that is an object");
-            } else {
-                return false;
-                console.log("not object or same number");
-            }
-        }
+        //  Use the reduce method in combination with the concat method to “flatten” an array of arrays into a single array that has all the elements of the original arrays.
 
-        document.write(deepEqual(1, 1));
-        console.log(deepEqual(obj, obj));
-        // → true
-        console.log(deepEqual(obj, {
-            here: 1,
-            object: 2
-        }));
-        // → false
-        console.log(deepEqual(obj, {
-            here: {
-                is: "an"
-            },
-            object: 2
-        }));
+        let arrays = [
+            [1, 2, 3],
+            [4, 5],
+            [6]
+        ];
+        // Your code here.
+        // → [1, 2, 3, 4, 5, 6]
+
+
+        document.write(arrays.reduce((flat, current) => flat.concat(current), []));
+
+        // I did not understand this concept. Ask Zach to explain this in the next lesson.
+        // → [1, 2, 3, 4, 5, 6]
     </script>
 </body>
