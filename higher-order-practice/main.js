@@ -23,3 +23,5 @@ let arrays = [
 const flaten = arrays.reduce(0, 0, 0, arrays);
 console.log(flaten);
 const flaten = arrays.reduce(arrays.concat(arrays[0], arrays[1], arrays[2]));
+console.log(arrays.reduce((flat, current) => flat.concat(current), []));
+console.log(arrays.reduce((flat, current) => flat.concat(current), []));
