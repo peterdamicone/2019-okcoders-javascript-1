@@ -86,3 +86,41 @@ const ageMap = ages
     .map(age => 2 * age);
 
 console.log(ageMap);
+
+// sort
+
+// sort by start year
+// const sortedCompanies = companies.sort(function(c1, c2) {
+//     if (c1.start > c2.start) {
+//         return 1;
+
+//     } else {
+//         return -1;
+//     }
+// });
+
+const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+console.log(sortedCompanies);
+
+// sort by ages
+const sortAges = ages.sort((a, b) => a - b);
+console.log(sortAges);
+
+// reduce
+
+// let ageSum = 0;
+// for (let i = 0; i < ages.length; i++) {
+//     ageSum += ages[i]
+// }
+
+const ageSum = ages.reduce((total, age) => total + age, 0)
+console.log(ageSum);
+
+// total years for all companies
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+console.log(totalYears);
+
+// combine methods
+
+const combined = ages
+    .map(age => age * 2);
