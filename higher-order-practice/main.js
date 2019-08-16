@@ -78,10 +78,11 @@ const lastedTenYears = companies.filter(company => (company.end - company.start 
 const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end} ]`);
 console.log(testMap);
 
-// square root every age
-const ageMap = ages
-const agesSquare = ages.map(age => Math.sqrt(age));
-const agesX2 = ages.map(age => 2 * age);
+// square root every age and multiply it by 2. Very cool how you can manipulate an array very cleanly.
+// note, don't forget to not end your statements before your last map. I tried using ; after first .map statment and it broke it. :(
 
-console.log(agesSquare);
-console.log(agesX2);
+const ageMap = ages
+    .map(age => Math.sqrt(age))
+    .map(age => 2 * age);
+
+console.log(ageMap);
