@@ -1,6 +1,15 @@
-const people = [{ name: "John Doe", age: 16 }, { name: "Thomas Calls", age: 19 }, { name: "Liam Smith", age: 20 }, { name: "Jessy Pinkman", age: 18 }, ];
-// exersizes from https://www.freecodecamp.org/news/higher-order-functions-in-javascript-d9101f9cf528/
-// Imagine writing a piece of code that accepts a list of people where you want to filter out the people that are equal or above the age of 18.
+// In class work 8/17/2019
+const example = [
+    [4, 7],
+    [6, 2], 1
+];
+const evenNumber = example.filter(e => e % 2 === 0)
+console.log(evenNumber)
+const isThereAnEvenNumber = example.reduce((p, c) => p + c, 0)
 
-const under18 = people.filter(age => age.age <= 18);
-console.log(under18);
+console.log(isThereAnEvenNumber);
+
+// map takes in two perameters. Collection (data structure).
+// function.map(col:array, callbackfn: type function) what you get back is an array.
+const combineAnArray = example.reduce((p, c) => p.concat(c), []);
+console.log(combineAnArray);
