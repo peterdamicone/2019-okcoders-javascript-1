@@ -1,15 +1,11 @@
-// In class work 8/17/2019
-const example = [
-    [4, 7],
-    [6, 2], 1
-];
-const evenNumber = example.filter(e => e % 2 === 0)
-console.log(evenNumber)
-const isThereAnEvenNumber = example.reduce((p, c) => p + c, 0)
+// Week 1 homework 
 
-console.log(isThereAnEvenNumber);
+// [1, 2, 3, 4] and go to only even [2, 4]
+// or an array of objects:
+// [{name: "zach", age: 4}, {name: "bob", age: 22}] and go to only aged greater than 10 [{name: "bob", age: 22}]
 
-// map takes in two perameters. Collection (data structure).
-// function.map(col:array, callbackfn: type function) what you get back is an array.
-const combineAnArray = example.reduce((p, c) => p.concat(c), []);
-console.log(combineAnArray);
+const exampleData1 = [1, 2, 3, 4]
+    // instructions - use Filter to create a new array with only even numbers
+
+const isEven = exampleData1.filter(e => e % 2 === 0)
+console.log(isEven)
